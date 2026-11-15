@@ -1,0 +1,33 @@
+{
+  "fullname": "FilePlus",
+  "name": "fileplus",
+  "description": "Advanced File Upload Template Variable",
+  "author": "Thomas Jakobi <office@treehillstudio.com>",
+  "private": true,
+  "version": "1.0.0",
+  "phpversion": "8.2",
+  "modxversion": "2.8",
+  "startYear": "2026",
+  "scripts": {
+    "build": "node build.js",
+    "build:bump": "node build.js bump",
+    "build:scripts": "node build.js scripts",
+    "build:sass": "node build.js sass",
+    "build:images": "node build.js images"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.6.2",
+    "cssnano": "^9.9.0",
+    "postcss": "^8.5.32",
+    "sass": "^1.107.1",
+    "terser": "^5.51.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "defaults"
+  ],
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "fsevents@2.3.3": true
+  }
+}

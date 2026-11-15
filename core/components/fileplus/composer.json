@@ -1,0 +1,26 @@
+{
+  "name": "treehillstudio/fileplus",
+  "description": "Advanced File Upload Template Variable",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Thomas Jakobi",
+      "email": "office@treehillstudio.com",
+      "homepage": "https://treehillstudio.com"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "config": {
+    "platform": {
+      "php": "8.2"
+    }
+  },
+  "require": {
+    "php": ">=8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "TreehillStudio\\FilePlus\\": "src/"
+    }
+  }
+}

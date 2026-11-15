@@ -1,0 +1,107 @@
+{
+  "name": "FilePlus",
+  "lowCaseName": "fileplus",
+  "description": "Advanced File Upload Template Variable",
+  "author": "Thomas Jakobi",
+  "version": "1.0.0",
+  "package": {
+    "elements": {
+      "chunks": [
+        {
+          "name": "FilePlus.demo",
+          "file": "fileplus.demo.html",
+          "description": "Demo chunk for File+ template variable output."
+        },
+        {
+          "name": "FilePlus.file",
+          "file": "fileplus.file.html",
+          "description": "Demo chunk for File+ snippet output."
+        }
+      ],
+      "plugins": [
+        {
+          "name": "FilePlus",
+          "description": "File+ runtime hooks - registers custom TV input & output types and includes javascripts on document edit pages.",
+          "file": "fileplus.plugin.php",
+          "events": [
+            "OnManagerPageBeforeRender",
+            "OnTVInputPropertiesList",
+            "OnTVInputRenderList",
+            "OnTVOutputRenderList",
+            "OnTVOutputRenderPropertiesList"
+          ]
+        }
+      ],
+      "snippets": [
+        {
+          "name": "FilePlus",
+          "file": "fileplus.snippet.php",
+          "description": "Snippet as an alternative to File+ TV Output Type",
+          "properties": [
+            {
+              "name": "tvname",
+              "value": ""
+            },
+            {
+              "name": "docid",
+              "value": ""
+            },
+            {
+              "name": "value",
+              "value": ""
+            },
+            {
+              "name": "source",
+              "value": ""
+            },
+            {
+              "name": "tpl",
+              "value": "FilePlus.file"
+            }
+          ]
+        }
+      ]
+    },
+    "systemSettings": [
+      {
+        "key": "debug",
+        "type": "combo-boolean",
+        "area": "system",
+        "value": "0"
+      },
+      {
+        "key": "allowed_file_types",
+        "area": "fileplus",
+        "value": ""
+      },
+      {
+        "key": "upload_path",
+        "area": "fileplus",
+        "value": ""
+      }
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "php",
+      "version": ">=8.2"
+    },
+    {
+      "name": "modx",
+      "version": ">=2.8"
+    }
+  ],
+  "build": {
+    "readme": "docs/readme.md",
+    "license": "docs/license.md",
+    "changelog": "docs/changelog.md",
+    "setupOptions": {
+      "source": "setup.options.php"
+    },
+    "resolver": {
+      "after": [
+        "resolve.treehillstudio.php"
+      ]
+    }
+  }
+}

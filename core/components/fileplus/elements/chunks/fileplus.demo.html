@@ -1,0 +1,57 @@
+<div>
+    <h3>File+ Demo Chunk</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Description</th>
+            <th>Current Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>[[%fileplus.placeholder.url? &namespace=`fileplus`]]</td>
+            <td>[[+url]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.file? &namespace=`fileplus`]]</td>
+            <td>[[+file:htmlent]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.filename? &namespace=`fileplus`]]</td>
+            <td>[[+filename:htmlent]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.name? &namespace=`fileplus`]]</td>
+            <td>[[+name:htmlent]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.extension? &namespace=`fileplus`]]</td>
+            <td>[[+extension]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.size? &namespace=`fileplus`]]</td>
+            <td>[[+size]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.size_formatted? &namespace=`fileplus`]]</td>
+            <td>[[+size_formatted]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.title? &namespace=`fileplus`]]</td>
+            <td>[[+title:htmlent]]</td>
+        </tr>
+        <tr>
+            <td>[[%fileplus.placeholder.description? &namespace=`fileplus`]]</td>
+            <td>[[+description:htmlent]]</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h4>Default file output</h4>
+
+    <p>
+        <a href="[[+url]]" target="_blank">[[+title:notempty=`[[+title:htmlent]]`:default=`[[+filename:htmlent]]`]]</a>
+        [[+size_formatted:notempty=`([[+extension:ucase]], [[+size_formatted]])`]]
+    </p>
+    [[+description:notempty=`<p class="description">[[+description:htmlent]]</p>`]]
+</div>
