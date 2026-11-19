@@ -182,8 +182,7 @@ class FilePlus
             $this->modx->controller->addJavascript($jsUrl . 'fileplus.min.js?v=v' . $this->version);
             $this->modx->controller->addCss($cssUrl . 'fileplus.min.css?v=v' . $this->version);
         }
-        $config = $this->options;
-        unset($config['scriptsIncluded']);
+        $config = $this->getManagerOptions();
         $this->modx->controller->addHtml('<script type="text/javascript">' .
             'FilePlus.config = ' . json_encode(array_merge($config, [
                 // The urls of the media sources are only needed by the manager scripts
@@ -419,5 +418,22 @@ class FilePlus
             '[[+tv_id]]' => (int)$tvId,
         ];
         return str_replace(array_keys($placeholders), array_values($placeholders), (string)$path);
+    }
+
+    /**
+     * Get the options used by the manager scripts, so that no server paths are output in the manager
+     *
+     * @param array|null $options Options to filter instead of the class options
+     * @return array
+     */
+    public function getManagerOptions(?array $options = null): array
+    {
+        return array_intersect_key($options ?? $this->options, array_flip([
+            'assetsUrl',
+            'connectorUrl',
+            'debug',
+            'modxversion',
+            'version',
+        ]));
     }
 }
