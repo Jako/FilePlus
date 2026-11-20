@@ -13,7 +13,7 @@ $_lang['fileplus.decimal_separator'] = ',';
 $_lang['fileplus.input_section'] = 'File+ Optionen';
 $_lang['fileplus.input_section_desc'] = 'Weitere Informationen zu den Optionen finden Sie in der <a href="https://jako.github.io/FilePlus/usage/" target="_blank">Dokumentation</a>.';
 $_lang['fileplus.allowedFileTypes'] = 'Erlaubte Dateitypen';
-$_lang['fileplus.allowedFileTypes_desc'] = '(Optional) Eine kommaseparierte Liste der Dateiendungen, die hochgeladen und ausgewählt werden können, z.B. pdf,docx,zip. Überschreibt die Systemeinstellung fileplus.allowed_file_types. Ohne beide wird die Systemeinstellung upload_files verwendet.';
+$_lang['fileplus.allowedFileTypes_desc'] = '(Optional) Eine kommaseparierte Liste der Dateiendungen, die hochgeladen und ausgewählt werden können, z. B. pdf,docx,zip. Überschreibt die Systemeinstellung fileplus.allowed_file_types. Ohne beide wird die Systemeinstellung upload_files verwendet.';
 $_lang['fileplus.uploadPath'] = 'Upload-Pfad';
 $_lang['fileplus.uploadPath_desc'] = '(Optional) Der Pfad in der Medienquelle für hochgeladene Dateien. Überschreibt die Systemeinstellung fileplus.upload_path. Verfügbare Platzhalter: [[+year]], [[+month]], [[+day]], [[+user]], [[+username]], [[+resource_id]], [[+tv_id]].';
 $_lang['fileplus.allowTitle'] = 'Titelfeld anzeigen';
